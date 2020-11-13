@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "default": {},
+  "required": [
+    "status",
+    "message",
+    "detail",
+    "time"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "status": {
+      "$id": "#/properties/status",
+      "type": "string",
+      "title": "The status schema",
+      "default": ""
+    },
+    "message": {
+      "$id": "#/properties/message",
+      "type": "string",
+      "title": "The message schema",
+      "default": ""
+    },
+    "detail": {
+      "$id": "#/properties/detail",
+      "type": "object",
+      "title": "The detail schema",
+      "default": {},
+      "required": [
+        "field"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "field": {
+          "$id": "#/properties/detail/properties/field",
+          "type": "string",
+          "title": "The field schema",
+          "default": ""
+        }
+      }
+    },
+    "time": {
+      "$id": "#/properties/time",
+      "type": "string",
+      "title": "The time schema",
+      "default": ""
+    }
+  }
+}
